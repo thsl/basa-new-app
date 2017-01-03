@@ -1,0 +1,53 @@
+html {
+  font-family: $theme-font-family;
+}
+
+body,
+.ionic-body {
+  color: $theme-text-color;
+  font-size: $theme-font-size;
+  font-family: -apple-system;
+  font-family: $theme-font-family;
+  line-height: $line-height-computed;
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+  -webkit-user-drag: none;
+  -ms-content-zooming: none;
+  letter-spacing: -0.01em;
+}
+.img-adaptative{
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.avatar-md{
+  border-radius: 50%;
+  width: 114px;
+  height: 114px;
+}
+
+
+.fontsize-xs {
+  font-size: 11px;
+}
+
+.fontsize-sm {
+  font-size: 15px;
+}
+
+.fontsize-md {
+  font-size: 20px;
+}
+
+.fontsize-lg {
+  font-size: 25px;
+}
+
+.fontsize-xl {
+  font-size: 33px;
+}
+
+.fontsize-xxl {
+  font-size: 53px;
+}

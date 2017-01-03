@@ -1,0 +1,36 @@
+.nav-bar {
+
+  .bar-header {
+    background: url("#{$theme-img-path}/logos/logo-basa-blur.png") no-repeat -22px -21px #338C4A;
+    background-size: 113px auto !important;
+    color:$white;
+    .buttons{
+
+      button{
+        color:$white;
+        font-size:20px;
+        position: relative;
+        .badge{
+          position: absolute;
+          top:0;
+          right:-10px;
+          font-family: $theme-font-family;
+          font-size: 11px;
+          width: 20px;
+          height: 20px;
+          padding: 2px 1px 0px 0px;
+        }
+      }
+    }
+    .title{
+      display: none;
+    }
+    @include clearfix();
+  }
+  .bar .buttons span {
+     display: block;
+  }
+  .buttons, .left-buttons{
+    width: 100%;
+  }
+}

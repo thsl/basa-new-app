@@ -1,0 +1,112 @@
+<ion-content scroll="false" id="inicio">
+    <ion-slides options="options" slider="data.slider">
+        <ion-slide-page>
+            <ion-view view-title="login" id="login-page">
+                <ion-content>
+                    <div class="logo">
+                        <img src="img/logos/logo-basa-w-simple.png" class="img-adaptative">
+                    </div>
+                    <div class="user-list">
+                        <div class="list animated fadeInLeft">
+                            <div class="item">
+                                <div class="item-avatar" ng-click="modal.show()">
+                                    <img src="img/avatars/adam.jpg">
+                                    <h2><strong>João da Silva</strong></h2>
+                                    <p>1º titular</p>
+                                    <p>000-0 / 00.0000-0 </p>
+                                </div>
+                            </div>
+
+
+                            <div class="item ">
+                                <div class="item-avatar">
+                                    <img src="img/avatars/mike.png">
+                                    <h2><strong>Pedro da Silva</strong></h2>
+                                    <p>1º titular</p>
+                                    <p>000-0 / 00.0000-0 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="theme-row mt-md">
+                            <div class="col-xs-6">
+                                <button class="button button-outline button-light">
+                                    1º Acesso
+                                </button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button class="button button-outline button-light">
+                                    Outra conta
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="theme-row mt-lg">
+                            <div class="col-xs-12">
+                                <button class="button button-outline button-light">
+                                    Abra uma conta
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="theme-row mt-lg menu-login">
+
+                            <div class="col-xs-6">
+                                <div class="menu-login-item">
+                                    <img src="../../img/icones/fale.png" class="img-adaptative"> <br/> Fale conosco
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="menu-login-item menu-login-item-center">
+                                    <img src="../../img/icones/localizador.png" class="img-adaptative">
+                                    <br/> Rede de atendimento
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-slide-page>
+        <ion-slide-page class="box-anuncio" style="background-image: url('../img/anuncios/anuncio-001.png');"></ion-slide-page>
+        <ion-slide-page class="box-anuncio" style="background-image: url('../img/anuncios/anuncio-002.png');"></ion-slide-page>
+    </ion-slides>
+    <script id="templates/modal.html" type="text/ng-template">
+        <ion-modal-view id="modal-login">
+            <ion-header-bar class="bar bar-header bar-positive">
+                <button class="button button-clear button-primary" ng-click="modal.hide()">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i> Voltar
+                </button>
+            </ion-header-bar>
+            <ion-content class="padding">
+                <div class="user-list">
+                    <div class="list animated fadeInUp">
+                        <div class="item">
+                            <div class="item-avatar">
+                                <img src="img/avatars/adam.jpg">
+                                <h2><strong>João da Silva</strong></h2>
+                                <p>1º titular</p>
+                                <p>000-0 / 00.0000-0 </p>
+                            </div>
+                            <div class="input-senha animated fadeInUp">
+                                <label class="item item-input item-floating-label">
+                                    <span class="input-label">Senha de 8 dígitos</span>
+                                    <input type="password" placeholder="Senha de 8 dígitos"> </label>
+                            </div>
+                            <div class="mt-md">
+                                <a class="button button-outline button-light" ng-click="login()">
+                                    Entrar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </ion-content>
+        </ion-modal-view>
+    </script>
+</ion-content>
+
+

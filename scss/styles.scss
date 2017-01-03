@@ -1,0 +1,24 @@
+//@import "../www/lib/ionic/scss/ionic/_variables.scss";
+@import
+  // var e mixins
+"ionic_variables",
+"theme-vars",
+"theme-mixins",
+
+  // helper sass
+"theme-scaffolding",
+"theme-space",
+"theme-media-queries",
+"theme-grid",
+
+  // fontes
+"theme-fontawesome",
+
+  // outros elementos
+"theme-type",
+"theme-forms",
+"theme-button",
+
+//páginas específicas
+"theme-login",
+"theme-navbar";

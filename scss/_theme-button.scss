@@ -1,0 +1,31 @@
+// Buttons
+.button {
+  font-size: 13px !important;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+  min-height: 37px;
+  padding: 0;
+  line-height: 36px;
+  &.button-outline {
+    width: 100%;
+    min-width: 100%;
+    border-width: 2px;
+    color: $white;
+    &.activated {
+      background: transparent;
+    }
+    &:focus {
+      background: transparent;
+    }
+    &:active {
+      background: transparent;
+    }
+  }
+  .button-light{
+    color: $white;
+  }
+}
+
+.button.button-light.button-outline.activated, .button.button-light.button-outline.active {
+  background: rgba(255, 255, 255, .3);
+}

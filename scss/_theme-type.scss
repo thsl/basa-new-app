@@ -1,0 +1,94 @@
+/**
+ * Typography
+ * --------------------------------------------------
+ */
+
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  //color: $base-color;
+  font-weight: $headings-font-weight;
+  font-family: $theme-font-family;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: $line-height-computed;
+  margin-bottom: ($line-height-computed / 2);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  + h1, + .h1,
+  + h2, + .h2,
+  + h3, + .h3 {
+    margin-top: ($line-height-computed / 2);
+  }
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2);
+}
+
+h1, .h1 { font-size: floor($font-size-base * 2.60); } // ~36px
+h2, .h2 { font-size: floor($font-size-base * 2.15); } // ~30px
+h3, .h3 { font-size: ceil($font-size-base * 1.70); } // ~24px
+h4, .h4 { font-size: ceil($font-size-base * 1.25); } // ~18px
+h5, .h5 { font-size:  $font-size-base; }
+h6, .h6 { font-size: ceil($font-size-base * 0.85); } // ~12px
+
+h1 small, .h1 small { font-size: ceil($font-size-base * 1.70); } // ~24px
+h2 small, .h2 small { font-size: ceil($font-size-base * 1.25); } // ~18px
+h3 small, .h3 small,
+h4 small, .h4 small { font-size: $font-size-base; }
+
+
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("#{$ionicons-font-path}/montserrat-light-webfont.eot");
+  src: url("#{$ionicons-font-path}/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"),
+  url("#{$ionicons-font-path}/montserrat-light-webfont.woff2") format("woff2"),
+  url("#{$ionicons-font-path}/montserrat-light-webfont.woff") format("woff"),
+  url("#{$ionicons-font-path}/montserrat-light-webfont.ttf") format("truetype"),
+  url("#{$ionicons-font-path}/montserrat-light-webfont.svg#montserratlight") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url("#{$ionicons-font-path}/montserrat-regular-webfont.eot");
+  src: url("#{$ionicons-font-path}/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"),
+  url("#{$ionicons-font-path}/montserrat-regular-webfont.woff2") format("woff2"),
+  url("#{$ionicons-font-path}/montserrat-regular-webfont.woff") format("woff"),
+  url("#{$ionicons-font-path}/montserrat-regular-webfont.ttf") format("truetype"),
+  url("#{$ionicons-font-path}/montserrat-regular-webfont.svg#montserratlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrat';
+  src:url("#{$ionicons-font-path}/montserrat-bold-webfont.eot");
+  src:url("#{$ionicons-font-path}/montserrat-bold-webfont.eot?#iefix#iefix") format("embedded-opentype"),
+  url("#{$ionicons-font-path}/montserrat-bold-webfont.ttf") format("truetype"),
+  url("#{$ionicons-font-path}/montserrat-bold-webfont.woff2") format("woff"),
+  url("#{$ionicons-font-path}/montserrat-bold-webfont.woff") format("woff"),
+  url("#{$ionicons-font-path}/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+
+
+
