@@ -1,0 +1,53 @@
+.tabs-bottom-nav {
+  .tab-nav {
+    background-color: $white;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-top: 1px solid #E0E0E0;
+    background-image: none;
+  }
+  .tab-item {
+    font-family: $theme-font-family;
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: -0.03em;
+    .icon {
+      &.theme-icon {
+        background-size: 22px auto !important;
+      }
+      &.contacorrente-on {
+        background: url("#{$theme-img-path}/icones/conta-corrente-on.png") center center no-repeat;
+      }
+      &.contacorrente-off {
+        background: url("#{$theme-img-path}/icones/conta-corrente.png") center center no-repeat;
+      }
+      &.pagamentos-on {
+        background: url("#{$theme-img-path}/icones/pagamentos-on.png") center center no-repeat;
+      }
+      &.pagamentos-off {
+        background: url("#{$theme-img-path}/icones/pagamentos.png") center center no-repeat;
+      }
+      &.transferencia-on {
+        background: url("#{$theme-img-path}/icones/transferencias-on.png") center 9px no-repeat;
+        background-size: 34px auto !important;
+      }
+      &.transferencia-off {
+        background: url("#{$theme-img-path}/icones/transferencias.png") center 9px no-repeat;
+        background-size: 34px auto !important;
+      }
+      &.poupanca-on {
+        background: url("#{$theme-img-path}/icones/poupanca-on.png") center center no-repeat;
+      }
+      &.poupanca-off {
+        background: url("#{$theme-img-path}/icones/poupanca.png") center center no-repeat;
+      }
+    }
+  }
+  .tab-item-active {
+    color: #338C4A;
+    border-color: #338C4A !important;
+  }
+  .tabs-striped .tab-item.tab-item-active {
+    border-color: #338C4A !important;
+  }
+}

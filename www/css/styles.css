@@ -936,6 +936,9 @@ body,
   .col-lg-offset-12 {
     margin-left: 100%; } }
 
+.view-container .scroll-content {
+  background-color: #EAEAEA; }
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
@@ -1067,6 +1070,196 @@ h4 small, .h4 small {
 .button.button-light.button-outline.activated, .button.button-light.button-outline.active {
   background: rgba(255, 255, 255, 0.3); }
 
+.scroll-content {
+  height: 100%; }
+  .scroll-content .scroll {
+    height: 100%; }
+
+.tabbed-slidebox {
+  position: relative;
+  height: 100%;
+  overflow: hidden; }
+  .tabbed-slidebox .slider {
+    height: 100%; }
+    .tabbed-slidebox .slider .slider-slides {
+      width: 100%;
+      height: 100%; }
+      .tabbed-slidebox .slider .slider-slides .slider-slide {
+        padding-top: 0px;
+        text-align: center;
+        font-weight: 300; }
+  .tabbed-slidebox .tsb-icons {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); }
+    .tabbed-slidebox .tsb-icons:after {
+      position: absolute;
+      height: 100%;
+      content: '';
+      width: 15px;
+      background-color: transparent;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); }
+    .tabbed-slidebox .tsb-icons:before {
+      position: absolute;
+      height: 100%;
+      content: '';
+      width: 15px;
+      background-color: transparent;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
+    .tabbed-slidebox .tsb-icons .tsb-ic-wrp {
+      display: flex;
+      position: relative;
+      -webkit-transition: -webkit-transform 0.3s;
+      -webkit-transform: translate3d(0, 0, 0); }
+      .tabbed-slidebox .tsb-icons .tsb-ic-wrp .scroll-view.scroll-x {
+        overflow-x: hidden;
+        overflow-y: hidden; }
+    .tabbed-slidebox .tsb-icons .scroll {
+      width: 100%; }
+      .tabbed-slidebox .tsb-icons .scroll a {
+        font-size: 15px;
+        line-height: 1.5em;
+        text-decoration: none;
+        margin: -5px 15px 10px 15px;
+        border-bottom: 3px solid transparent;
+        display: inline-block;
+        -webkit-transform: translate3d(0, 8px, 0);
+        color: #438CB9;
+        text-transform: uppercase; }
+      .tabbed-slidebox .tsb-icons .scroll a.active {
+        font-size: 18px;
+        border-bottom: 3px solid #ccc;
+        -webkit-transform: translate3d(0, 0, 0);
+        color: #656D78;
+        margin: 10px 10px 0px 10px;
+        line-height: 1em;
+        padding: 0px 0px 14px 0px; }
+  .tabbed-slidebox .tsb-hscroll.scroll-view {
+    white-space: nowrap;
+    margin: 0 auto; }
+    .tabbed-slidebox .tsb-hscroll.scroll-view .scroll-bar {
+      visibility: hidden; }
+    .tabbed-slidebox .tsb-hscroll.scroll-view .scroll.onscroll {
+      -webkit-transition: -webkit-transform 0.3s; }
+
+.nav-bar .bar-header {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  background: url("../img/logos/logo-basa-blur.png") no-repeat -22px -21px #338C4A;
+  background-size: 113px auto !important;
+  color: #fff;
+  border: none; }
+  .nav-bar .bar-header .buttons button {
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    background-color: transparent;
+    border: none; }
+    .nav-bar .bar-header .buttons button .badge {
+      position: absolute;
+      top: 0;
+      right: -10px;
+      font-family: "montserrat", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+      font-size: 11px;
+      width: 20px;
+      height: 20px;
+      padding: 2px 1px 0px 0px; }
+  .nav-bar .bar-header .title {
+    display: none; }
+  .nav-bar .bar-header:before, .nav-bar .bar-header:after {
+    content: " ";
+    display: table; }
+  .nav-bar .bar-header:after {
+    clear: both; }
+
+.nav-bar .bar .buttons span {
+  display: block; }
+
+.nav-bar .buttons, .nav-bar .left-buttons {
+  width: 100%; }
+
+.tabs-bottom-nav .tab-nav {
+  background-color: #fff;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-top: 1px solid #E0E0E0;
+  background-image: none; }
+
+.tabs-bottom-nav .tab-item {
+  font-family: "montserrat", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: -0.03em; }
+  .tabs-bottom-nav .tab-item .icon.theme-icon {
+    background-size: 22px auto !important; }
+  .tabs-bottom-nav .tab-item .icon.contacorrente-on {
+    background: url("../img/icones/conta-corrente-on.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.contacorrente-off {
+    background: url("../img/icones/conta-corrente.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.pagamentos-on {
+    background: url("../img/icones/pagamentos-on.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.pagamentos-off {
+    background: url("../img/icones/pagamentos.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.transferencia-on {
+    background: url("../img/icones/transferencias-on.png") center 9px no-repeat;
+    background-size: 34px auto !important; }
+  .tabs-bottom-nav .tab-item .icon.transferencia-off {
+    background: url("../img/icones/transferencias.png") center 9px no-repeat;
+    background-size: 34px auto !important; }
+  .tabs-bottom-nav .tab-item .icon.poupanca-on {
+    background: url("../img/icones/poupanca-on.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.poupanca-off {
+    background: url("../img/icones/poupanca.png") center center no-repeat; }
+
+.tabs-bottom-nav .tab-item-active {
+  color: #338C4A;
+  border-color: #338C4A !important; }
+
+.tabs-bottom-nav .tabs-striped .tab-item.tab-item-active {
+  border-color: #338C4A !important; }
+
+.tabs-bottom-nav .tab-nav {
+  background-color: #fff;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-top: 1px solid #E0E0E0;
+  background-image: none; }
+
+.tabs-bottom-nav .tab-item {
+  font-family: "montserrat", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: -0.03em; }
+  .tabs-bottom-nav .tab-item .icon.theme-icon {
+    background-size: 22px auto !important; }
+  .tabs-bottom-nav .tab-item .icon.contacorrente-on {
+    background: url("../img/icones/conta-corrente-on.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.contacorrente-off {
+    background: url("../img/icones/conta-corrente.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.pagamentos-on {
+    background: url("../img/icones/pagamentos-on.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.pagamentos-off {
+    background: url("../img/icones/pagamentos.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.transferencia-on {
+    background: url("../img/icones/transferencias-on.png") center 9px no-repeat;
+    background-size: 34px auto !important; }
+  .tabs-bottom-nav .tab-item .icon.transferencia-off {
+    background: url("../img/icones/transferencias.png") center 9px no-repeat;
+    background-size: 34px auto !important; }
+  .tabs-bottom-nav .tab-item .icon.poupanca-on {
+    background: url("../img/icones/poupanca-on.png") center center no-repeat; }
+  .tabs-bottom-nav .tab-item .icon.poupanca-off {
+    background: url("../img/icones/poupanca.png") center center no-repeat; }
+
+.tabs-bottom-nav .tab-item-active {
+  color: #338C4A; }
+
 #inicio #login-page {
   background-color: #28753f;
   background: linear-gradient(135deg, #28753f 0%, #44766e 100%);
@@ -1183,34 +1376,3 @@ h4 small, .h4 small {
         background-color: rgba(0, 255, 66, 0.16);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
-
-.nav-bar .bar-header {
-  background: url("../img/logos/logo-basa-blur.png") no-repeat -22px -21px #338C4A;
-  background-size: 113px auto !important;
-  color: #fff; }
-  .nav-bar .bar-header .buttons button {
-    color: #fff;
-    font-size: 20px;
-    position: relative; }
-    .nav-bar .bar-header .buttons button .badge {
-      position: absolute;
-      top: 0;
-      right: -10px;
-      font-family: "montserrat", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
-      font-size: 11px;
-      width: 20px;
-      height: 20px;
-      padding: 2px 1px 0px 0px; }
-  .nav-bar .bar-header .title {
-    display: none; }
-  .nav-bar .bar-header:before, .nav-bar .bar-header:after {
-    content: " ";
-    display: table; }
-  .nav-bar .bar-header:after {
-    clear: both; }
-
-.nav-bar .bar .buttons span {
-  display: block; }
-
-.nav-bar .buttons, .nav-bar .left-buttons {
-  width: 100%; }

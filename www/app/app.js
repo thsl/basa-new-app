@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.login.controlador', 'starter.home.controlador', 'starter.menu.controlador', 'starter.login.servico', 'starter.home.servico'])
+angular.module('starter', ['ionic', 'starter.login.controlador', 'starter.home.controlador', 'starter.menu.controlador', 'starter.login.servico', 'starter.home.servico', 'tabSlideBox'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

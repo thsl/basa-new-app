@@ -1,19 +1,23 @@
 .nav-bar {
 
   .bar-header {
+    box-shadow:0 3px 6px rgba(0,0,0,0.15);
     background: url("#{$theme-img-path}/logos/logo-basa-blur.png") no-repeat -22px -21px #338C4A;
     background-size: 113px auto !important;
-    color:$white;
-    .buttons{
+    color: $white;
+    border: none;
+    .buttons {
 
-      button{
-        color:$white;
-        font-size:20px;
+      button {
+        color: $white;
+        font-size: 20px;
         position: relative;
-        .badge{
+        background-color: transparent;
+        border: none;
+        .badge {
           position: absolute;
-          top:0;
-          right:-10px;
+          top: 0;
+          right: -10px;
           font-family: $theme-font-family;
           font-size: 11px;
           width: 20px;
@@ -22,15 +26,15 @@
         }
       }
     }
-    .title{
+    .title {
       display: none;
     }
     @include clearfix();
   }
   .bar .buttons span {
-     display: block;
+    display: block;
   }
-  .buttons, .left-buttons{
+  .buttons, .left-buttons {
     width: 100%;
   }
 }

@@ -3,7 +3,7 @@
         <!-- Main content, usually <ion-nav-view> -->
         <ion-nav-bar>
             <ion-nav-buttons class="">
-                <button class="fa fa-chevron-left pull-left"></button>
+                <button class="fa fa-chevron-left pull-left" ng-click="voltarMenu()"></button>
                 <button class="fa fa-home pull-left"></button>
 
                 <button class="fa fa-bars pull-right" menu-toggle="right"></button>
@@ -14,20 +14,11 @@
         <ion-nav-view name="menuContent">
 
         </ion-nav-view>
-        <ion-tabs class="tabs-positive tabs-icon-top">
-
-            <ion-tab title="Home" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
-                <!-- Tab 1 content -->
-            </ion-tab>
-
-            <ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
-                <!-- Tab 2 content -->
-            </ion-tab>
-
-            <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
-                <!-- Tab 3 content -->
-            </ion-tab>
-
+        <ion-tabs class="tabs-icon-top tabs-bottom-nav">
+            <ion-tab title="C. Corrente" icon-on="theme-icon contacorrente-on" icon-off="theme-icon contacorrente-off"></ion-tab>
+            <ion-tab title="Pagamentos" icon-on="theme-icon pagamentos-on" icon-off="theme-icon pagamentos-off"></ion-tab>
+            <ion-tab title="Transferências" icon-on="theme-icon transferencia-on" icon-off="theme-icon transferencia-off"></ion-tab>
+            <ion-tab title="Poupança" icon-on="theme-icon poupanca-on" icon-off="theme-icon poupanca-off"></ion-tab>
         </ion-tabs>
     </ion-side-menu-content>
 
@@ -35,4 +26,3 @@
     <ion-side-menu side="right">
         <p>Conteúdo</p>
     </ion-side-menu>
-
