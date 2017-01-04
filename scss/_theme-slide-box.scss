@@ -26,28 +26,28 @@
     text-align: center;
     margin: 0;
     position: relative;
-    background-color: $white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    &:after{
+    background-color: transparent;
+    //box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    &:after {
       position: absolute;
       height: 100%;
       content: '';
       width: 15px;
       background-color: transparent;
-      top:0;
+      top: 0;
       left: 0;
-      background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+      background: linear-gradient(to right, rgba(234, 234, 234, 1) 0%, rgba(255, 255, 255, 0) 100%);
     }
-    &:before{
+    &:before {
       position: absolute;
       height: 100%;
       content: '';
       width: 15px;
       background-color: transparent;
-      top:0;
+      top: 0;
       right: 0;
       z-index: 1;
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(234, 234, 234, 1) 100%);
     }
     .tsb-ic-wrp {
       display: flex;
@@ -64,30 +64,32 @@
     }
     .scroll {
       width: 100%;
-
+      padding-top: 10px;
+      //transition: all 0.1s ease-out;
       a {
         //width: 50px;
         font-size: 15px;
-        line-height: 1.5em;
+        line-height: -1em;
         text-decoration: none;
-        margin: -5px 15px 10px 15px;
-        border-bottom: 3px solid transparent;
+        margin: 0px 5px 0px 5px;
+        border-bottom: 2px solid transparent;
         display: inline-block;
         -webkit-transform: translate3d(0, 8px, 0);
-        color: #438CB9;
+        color: #7A7A7A;
         text-transform: uppercase;
+        width: 60px;
+        transform: translate(0px, 0px);
+        letter-spacing: -0.05em;
         //transition: font-size 0.1s ease-out;
+        &.active {
+          font-size: 17px;
+          border-bottom: 3px solid $theme-verde-one;
+          -webkit-transform: translate3d(0, 0, 0);
+          color: $theme-verde-one;
+          //transition: font-size 0.1s ease-out;
+        }
       }
-      a.active {
-        font-size: 18px;
-        border-bottom: 3px solid #ccc;
-        -webkit-transform: translate3d(0, 0, 0);
-        color: #656D78;
-        margin: 10px 10px 0px 10px;
-        line-height: 1em;
-        padding: 0px 0px 14px 0px;
-        //transition: font-size 0.1s ease-out;
-      }
+
     }
   }
 

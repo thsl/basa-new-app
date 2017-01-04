@@ -1,5 +1,5 @@
 <ion-side-menus>
-    <ion-side-menu-content class="nav-bar">
+    <ion-side-menu-content class="nav-bar" edge-drag-threshold="true">
         <!-- Main content, usually <ion-nav-view> -->
         <ion-nav-bar>
             <ion-nav-buttons class="">
@@ -23,6 +23,82 @@
     </ion-side-menu-content>
 
     <!-- Right menu -->
-    <ion-side-menu side="right">
-        <p>Conteúdo</p>
+    <ion-side-menu side="right" id="side-menu-global">
+        <ion-view>
+            <ion-content>
+                <div class="side-menu-body">
+                    <header class="side-menu-header">
+                        <div class="buttons-top clearfix">
+                            <div class="pull-left">
+                                <button class="button button-clear button-light" menu-toggle="right">
+                                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="pull-right">
+                                <button class="button button-outline button-light btn-logoff" ng-click="voltarMenu()">
+                                    <i class="fa fa-power-off" aria-hidden="true"></i> Sair
+                                </button>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="user-list">
+                                <div class="list animated fadeInUp">
+                                    <div class="item">
+                                        <div class="item-avatar">
+                                            <img src="img/avatars/adam.jpg">
+                                            <h2><strong>João da Silva</strong></h2>
+                                            <p>1º titular</p>
+                                            <p>000-0 / 00.0000-0 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="side-menu-content">
+                        <section class="menu-ccorrente">
+                            <h4 class="list-title tilte-cc">Conta corrente</h4>
+                            <ul>
+                                <li><a>Extrato completo</a></li>
+                            </ul>
+                        </section>
+                        <section class="menu-pagamentos">
+                            <h4 class="list-title tilte-pagamentos">Pagamentos</h4>
+                            <ul>
+                                <li><a>Leitor de código de barras</a></li>
+                                <li><a>Digitar código</a></li>
+                                <li><a>Importar boleto</a></li>
+                                <li><a>Comprovantes de pagamentos</a></li>
+                                <li><a>Cancelar agendamento</a></li>
+                            </ul>
+                        </section>
+                        <section class="menu-transferencias">
+                            <h4 class="list-title tilte-transferencias">Transferências</h4>
+                            <ul>
+                                <li><a>Entre contas correntes</a></li>
+                                <li><a>Conta corrente para poupança</a></li>
+                                <li><a>Poupança para Conta corrente</a></li>
+                                <li><a>Para outros bancos (TED ou DOC)</a></li>
+                                <li><a>Comprovantes de transferências</a></li>
+                            </ul>
+                        </section>
+                        <section class="menu-poupanca">
+                            <h4 class="list-title tilte-poupanca">Poupança</h4>
+                            <ul>
+                                <li><a>Extrato / Saldo</a></li>
+                                <li><a>Depósito programado</a></li>
+                            </ul>
+                        </section>
+                        <section class="menu-emprestimos">
+                            <h4 class="list-title tilte-emprestimos">Empréstimos</h4>
+                            <ul>
+                                <li><a href="#">Simule um empréstimo</a></li>
+                                <li><a href="#">Contratar</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+
+            </ion-content>
+        </ion-view>
     </ion-side-menu>

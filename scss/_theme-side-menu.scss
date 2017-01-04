@@ -1,49 +1,123 @@
-.tabs-bottom-nav {
-  .tab-nav {
-    background-color: $white;
-    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15);
-    border: none;
-    border-top: 1px solid #E0E0E0;
-    background-image: none;
+#side-menu-global {
+  background-color: rgba(40, 117, 63, 1);
+  background: linear-gradient(135deg, rgba(40, 117, 63, 1) 0%, rgba(68, 118, 110, 1) 100%);
+  color: $white;
+  .pane, .scroll-content {
+    background-color: transparent;
   }
-  .tab-item {
-    font-family: $theme-font-family;
-    text-transform: uppercase;
-    font-size: 8px;
-    letter-spacing: -0.03em;
-    .icon {
-      &.theme-icon {
-        background-size: 22px auto !important;
-      }
-      &.contacorrente-on {
-        background: url("#{$theme-img-path}/icones/conta-corrente-on.png") center center no-repeat;
-      }
-      &.contacorrente-off {
-        background: url("#{$theme-img-path}/icones/conta-corrente.png") center center no-repeat;
-      }
-      &.pagamentos-on {
-        background: url("#{$theme-img-path}/icones/pagamentos-on.png") center center no-repeat;
-      }
-      &.pagamentos-off {
-        background: url("#{$theme-img-path}/icones/pagamentos.png") center center no-repeat;
-      }
-      &.transferencia-on {
-        background: url("#{$theme-img-path}/icones/transferencias-on.png") center 9px no-repeat;
-        background-size: 34px auto !important;
-      }
-      &.transferencia-off {
-        background: url("#{$theme-img-path}/icones/transferencias.png") center 9px no-repeat;
-        background-size: 34px auto !important;
-      }
-      &.poupanca-on {
-        background: url("#{$theme-img-path}/icones/poupanca-on.png") center center no-repeat;
-      }
-      &.poupanca-off {
-        background: url("#{$theme-img-path}/icones/poupanca.png") center center no-repeat;
+  .side-menu-body {
+    padding: 15px;
+    background: url("#{$theme-img-path}/backgrounds/bck-001.png") no-repeat top left;
+    background-size: 100%;
+    .btn-logoff {
+      font-size: 10px !important;
+      padding: 4px 10px;
+      line-height: 0;
+      border-width: 1px;
+      border-color: $white;
+    }
+    .user-info {
+      .user-list {
+        width: 100%;
+        .list {
+          width: 100%;
+          margin: 0;
+          .item {
+            background-color: transparent;
+            border-width: 0 0 1px 0;
+            border-color: rgba(255, 255, 255, 0.2);
+            color: $white;
+            max-height: 100%;
+            transition: max-height 0.3s ease-in-out;
+            margin: 0;
+            h2, p {
+              color: $white;
+              font-size: 90%;
+            }
+            a {
+              color: $white;
+            }
+            &:last-child, &:first-child {
+              border: none;
+            }
+
+          }
+          .item-avatar {
+            > img {
+              max-height: 63px;
+              max-width: 63px;
+              border: 3px solid rgba(255, 255, 255, .3);
+            }
+          }
+        }
+
       }
     }
-  }
-  .tab-item-active {
-    color: #338C4A;
+    .side-menu-content {
+      margin: 0 -15px;
+      ul li {
+        list-style-type: none;
+      }
+      section {
+        margin: 40px 0;
+      }
+      .list-title {
+        margin: 0 30px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #FFE898;
+        font-weight: 700;
+        background-size: 22px auto !important;
+        padding: 5px 0 5px 30px;
+        &.tilte-cc {
+          background: url("#{$theme-img-path}/icones/conta-corrente-yellow.png") left center no-repeat;
+        }
+        &.tilte-pagamentos {
+          background: url("#{$theme-img-path}/icones/pagamentos-yellow.png") left center no-repeat;
+        }
+        &.tilte-transferencias {
+          background: url("#{$theme-img-path}/icones/transferencias-yellow.png") left center no-repeat;
+        }
+        &.tilte-poupanca {
+          background: url("#{$theme-img-path}/icones/poupanca-yellow.png") left center no-repeat;
+        }
+        &.tilte-emprestimos {
+          background: url("#{$theme-img-path}/icones/emprestimos-yellow.png") left center no-repeat;
+        }
+      }
+      ul {
+        li {
+          font-weight: 100;
+          border-bottom: 1px solid rgba(255, 255, 255, .3);
+          a {
+            color: $white;
+            text-decoration: none;
+            margin: 25px 30px;
+            display: inline-block;
+            font-size: 15px;
+            width: 100%;
+            position: relative;
+            &:active, &:focus, &:visited {
+              color: $white;
+              text-decoration: none;
+            }
+            &:after {
+              content: "\f105";
+              font-family: FontAwesome;
+              font-style: normal;
+              font-weight: normal;
+              text-decoration: none;
+              position: absolute;
+              font-size: 15px;
+              color: rgba(255, 255, 255, 0.4);
+              top: auto;
+              right: 50px;
+              //margin: -300px 0 0 -200px;
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
   }
 }
