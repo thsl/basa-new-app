@@ -14,19 +14,20 @@ body,
   -webkit-user-drag: none;
   -ms-content-zooming: none;
   letter-spacing: -0.01em;
+  font-weight: 100;
 }
-.img-adaptative{
+
+.img-adaptative {
   max-width: 100%;
   max-height: 100%;
   height: auto;
 }
 
-.avatar-md{
+.avatar-md {
   border-radius: 50%;
   width: 114px;
   height: 114px;
 }
-
 
 .fontsize-xs {
   font-size: 11px;
@@ -50,4 +51,269 @@ body,
 
 .fontsize-xxl {
   font-size: 53px;
+}
+
+/* Dividers */
+
+.divider-top {
+  margin-top: $margin-sm;
+  padding-top: $margin-sm;
+  border-top: 1px solid #DBDBDB;
+}
+
+.divider-right {
+  margin-right: $margin-sm;
+  padding-right: $margin-sm;
+  border-right: 1px solid #DBDBDB;
+}
+
+.divider-bottom {
+  margin-bottom: $margin-sm;
+  padding-bottom: $margin-sm;
+  border-bottom: 1px solid #DBDBDB;
+}
+
+.divider-left {
+  margin-left: $margin-sm;
+  padding-left: $margin-sm;
+  border-left: 1px solid #DBDBDB;
+}
+
+/* Cores genéricas, para textos */
+.text-white {
+  color: #fff;
+  &.a {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.text-red {
+  color: $red !important;
+  &.a {
+    color: $red;
+  }
+  a {
+    color: $red;
+  }
+}
+
+.text-yellow {
+  color: $yellow !important;
+  &.a {
+    color: $yellow;
+  }
+  a {
+    color: $yellow;
+  }
+}
+
+.text-aqua {
+  color: $aqua !important;
+  &.a {
+    color: $aqua;
+  }
+  a {
+    color: $aqua;
+  }
+}
+
+.text-blue {
+  color: $blue !important;
+  &.a {
+    color: $blue;
+  }
+  a {
+    color: $blue;
+  }
+}
+
+.text-black {
+  color: $black !important;
+  &.a {
+    color: $black;
+  }
+  a {
+    color: $black;
+  }
+}
+
+.text-light-blue {
+  color: $light-blue !important;
+  &.a {
+    color: $light-blue;
+  }
+  a {
+    color: $light-blue;
+  }
+}
+
+.text-light-blue-two {
+  color: $blue-light-two !important;
+  &.a {
+    color: $blue-light-two;
+  }
+  a {
+    color: $blue-light-two;
+  }
+}
+
+.text-green {
+  color: $green !important;
+  &.a {
+    color: $green;
+  }
+  a {
+    color: $green;
+  }
+}
+
+.text-navy {
+  color: $navy !important;
+  &.a {
+    color: $navy;
+  }
+  a {
+    color: $navy;
+  }
+}
+
+.text-teal {
+  color: $teal !important;
+  &.a {
+    color: $teal;
+  }
+  a {
+    color: $teal;
+  }
+}
+
+.text-olive {
+  color: $olive !important;
+  &.a {
+    color: $olive;
+  }
+  a {
+    color: $olive;
+  }
+}
+
+.text-lime {
+  color: $lime !important;
+  &.a {
+    color: $lime;
+  }
+  a {
+    color: $lime;
+  }
+}
+
+.text-orange {
+  color: $orange !important;
+  &.a {
+    color: $orange;
+  }
+  a {
+    color: $orange;
+  }
+}
+
+.text-fuchsia {
+  color: $fuchsia !important;
+  &.a {
+    color: $fuchsia;
+  }
+  a {
+    color: $fuchsia;
+  }
+}
+
+.text-purple {
+  color: $purple !important;
+  &.a {
+    color: $purple;
+  }
+  a {
+    color: $purple;
+  }
+}
+
+.text-maroon {
+  color: $maroon !important;
+  &.a {
+    color: $maroon;
+  }
+  a {
+    color: $maroon;
+  }
+}
+
+
+// ---------------------------------------------------------------
+
+/* Rolagens */
+
+.rol-vert {
+  display: block;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.rol-hor {
+  display: block;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.rol-hor-vert {
+  display: block;
+  overflow: auto;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+/* Rolagens */
+
+.rol-vert {
+  display: block;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.rol-hor {
+  display: block;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.rol-hor-vert {
+  display: block;
+  overflow: auto;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+.overflow-dots {
+  display:inline-block;
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+}
+
+//Força Uppercase/Lower
+.text-upper {
+  text-transform: uppercase !important;
+}
+
+.text-lower {
+  text-transform: lowercase !important;
+}
+
+.text-line-through {
+  text-decoration: line-through
 }

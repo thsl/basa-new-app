@@ -1,5 +1,5 @@
-<ion-view>
-    <ion-content class="">
+<ion-view xmlns="http://www.w3.org/1999/html">
+    <ion-content>
         <tab-slide-box>
             <div class="tsb-icons">
                 <div class="tsb-ic-wrp">
@@ -13,23 +13,82 @@
                 </div>
 
             </div>
-            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
-                <ion-slide>
-                    <h1>Home content</h1>
+            <ion-slide-box show-pager="false" class="" on-slide-changed="slideHasChanged($index)">
+                <!-- slide 01 -->
+                <ion-slide class="has-navbottom">
+                    <div class="container mt-md">
+                        <div class="theme-row">
+                            <div class="col-xs-12">
+                                <h3 class="box-title">Conta corrente: Outubro 2016</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="box-fluid">
+                        <div class="button-bar">
+                            <a class="button" ng-class="{'button-positive': isActive('semana')}" ng-click="setActive('semana')">Semana</a>
+                            <a class="button" ng-class="{'button-positive': isActive('mes')}" ng-click="setActive('mes')">Mês</a>
+                            <a class="button" ng-class="{'button-positive': isActive('ano')}" ng-click="setActive('ano')">Ano</a>
+                        </div>
+                        <h4 class="mb-lg mt-lg box-title">Gastos dos últimos 7 dias:</h4>
+                        <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick"></canvas>
+                        <div class="divider-top">
+                            <div class="theme-row">
+                                <div class="col-xs-7">
+                                    <div class="divider-right text-center">
+                                        <h4 class="box-title">Saldo total:</h4>
+                                        <h2>
+                                            <small>R$:</small>
+                                            <span class="text-green"> 999.999,99</span></h2>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5">
+                                    <div class="text-center ">
+                                        <h4 class="box-title">Lanç. futuros:</h4>
+                                        <h3 class="mt-sm">
+                                            <small>R$:</small>
+                                            <span class="text-red"> - 999.999,99</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="theme-row divider-top text-center">
+                                    <div class="col-xs-12">
+                                        <h4 class="box-title">Cheque esp.: R$
+                                            <span class="text-green h3">000.000,00</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="mt-md">
+                        <div class="container mt-lg">
+                            <div class="theme-row">
+                                <div class="col-xs-12">
+                                    <h3 class="box-title">Sábado, dia 20</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-fluid">
+                            <ul class="history-list">
+                                <li class="history-item">
+                                    <div class="theme-row">
+                                        <div class="col-xs-8">
+                                            <p class="history-type">Débito conta-corrente lorem ipsum</p>
+                                            <p class="history-title text-red">Nome grande do Nome do Lugar</p>
+                                            <small>Toque para ver o comprovante</small>
+                                        </div>
+                                        <div class="col-xs-4 overflow-hide text-right">
+                                            <p class="history-number">00000000000</p>
+                                            <p class="history-value text-red">- 000.000,00</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
                 </ion-slide>
-                <ion-slide>
-                    <h1>Games content</h1>
-                </ion-slide>
-                <ion-slide>
-                    <h1>Mail content</h1>
-                </ion-slide>
-                <ion-slide>
-                    <h1>Car content</h1>
-                </ion-slide>
-                <ion-slide>
-                    <h1>Profile content</h1>
-                </ion-slide>
-
+                <!-- fim slide 01 -->
             </ion-slide-box>
         </tab-slide-box>
     </ion-content>

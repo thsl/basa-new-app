@@ -10,7 +10,6 @@
     width: 100%;
     min-width: 100%;
     border-width: 2px;
-    color: $white;
     &.activated {
       background: transparent;
     }
@@ -21,11 +20,30 @@
       background: transparent;
     }
   }
-  .button-light{
+  &.button-light{
     color: $white;
+    border-color: $white;
+    &.button-outline.activated{
+      background: rgba(255, 255, 255, .3);
+    }
+    &.button-outline.active{
+      background: rgba(255, 255, 255, .3);
+    }
   }
 }
 
-.button.button-light.button-outline.activated, .button.button-light.button-outline.active {
-  background: rgba(255, 255, 255, .3);
+.button-bar{
+  .button{
+    font-size: $theme-font-size;
+    text-transform: none;
+    //font-weight: 100 !important;
+    background-color: #DBDBDB;
+    padding: 0 8px;
+    & a{
+      font-weight: 100;
+    }
+    &.button-positive{
+      background-color: $theme-verde-one;
+    }
+  }
 }

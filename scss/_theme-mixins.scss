@@ -1,3 +1,51 @@
+// sombras padrão
+@mixin theme-shadow-boxes($s-pos) {
+  box-shadow: 0 $s-pos 2px rgba(0, 0, 0, .3);
+}
+
+
+
+
+// Mixin para os espaços genéricos
+// ---------------------------------------------------------------
+@mixin responsive-margin-padding($scale) {
+
+  $sizes: (
+          xs: $margin-xs,
+          sm: $margin-sm,
+          md: $margin-md,
+          lg: $margin-lg,
+          xl: $margin-xl
+  );
+
+  $props: (
+          m: margin,
+          p: padding
+  );
+
+  $directions: (
+          t: top,
+          r: right,
+          b: bottom,
+          l: left
+  );
+
+  @each $prop-short, $prop in $props {
+    @each $size-short, $size in $sizes {
+      @each $direction-short, $direction in $directions {
+        .#{$prop-short}#{$direction-short}-#{$size-short} {
+          #{$prop}-#{$direction}: round($size * $scale);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
 // Grid system
 //
 // Generate semantic grid columns with these mixins.
@@ -6,14 +54,14 @@
 @mixin container-fixed($gutter: $grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;
-  padding-left:  floor(($gutter / 2));
+  padding-left: floor(($gutter / 2));
   padding-right: ceil(($gutter / 2));
   @include clearfix;
 }
 
 // Creates a wrapper for a series of columns
 @mixin make-row($gutter: $grid-gutter-width) {
-  margin-left:  ceil(($gutter / -2));
+  margin-left: ceil(($gutter / -2));
   margin-right: floor(($gutter / -2));
   @include clearfix;
 }
@@ -24,15 +72,18 @@
   float: left;
   width: percentage(($columns / $grid-columns));
   min-height: 1px;
-  padding-left:  ($gutter / 2);
+  padding-left: ($gutter / 2);
   padding-right: ($gutter / 2);
 }
+
 @mixin make-xs-column-offset($columns) {
   margin-left: percentage(($columns / $grid-columns));
 }
+
 @mixin make-xs-column-push($columns) {
   left: percentage(($columns / $grid-columns));
 }
+
 @mixin make-xs-column-pull($columns) {
   right: percentage(($columns / $grid-columns));
 }
@@ -41,7 +92,7 @@
 @mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  ($gutter / 2);
+  padding-left: ($gutter / 2);
   padding-right: ($gutter / 2);
 
   @media (min-width: $screen-sm-min) {
@@ -49,16 +100,19 @@
     width: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-sm-column-offset($columns) {
   @media (min-width: $screen-sm-min) {
     margin-left: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-sm-column-push($columns) {
   @media (min-width: $screen-sm-min) {
     left: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-sm-column-pull($columns) {
   @media (min-width: $screen-sm-min) {
     right: percentage(($columns / $grid-columns));
@@ -69,7 +123,7 @@
 @mixin make-md-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  ($gutter / 2);
+  padding-left: ($gutter / 2);
   padding-right: ($gutter / 2);
 
   @media (min-width: $screen-md-min) {
@@ -77,16 +131,19 @@
     width: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-md-column-offset($columns) {
   @media (min-width: $screen-md-min) {
     margin-left: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-md-column-push($columns) {
   @media (min-width: $screen-md-min) {
     left: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-md-column-pull($columns) {
   @media (min-width: $screen-md-min) {
     right: percentage(($columns / $grid-columns));
@@ -97,7 +154,7 @@
 @mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  ($gutter / 2);
+  padding-left: ($gutter / 2);
   padding-right: ($gutter / 2);
 
   @media (min-width: $screen-lg-min) {
@@ -105,23 +162,24 @@
     width: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-lg-column-offset($columns) {
   @media (min-width: $screen-lg-min) {
     margin-left: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-lg-column-push($columns) {
   @media (min-width: $screen-lg-min) {
     left: percentage(($columns / $grid-columns));
   }
 }
+
 @mixin make-lg-column-pull($columns) {
   @media (min-width: $screen-lg-min) {
     right: percentage(($columns / $grid-columns));
   }
 }
-
-
 
 // Framework grid generation
 //
@@ -138,11 +196,10 @@
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
-    padding-left:  ceil(($grid-gutter-width / 2));
+    padding-left: ceil(($grid-gutter-width / 2));
     padding-right: floor(($grid-gutter-width / 2));
   }
 }
-
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
 @mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
@@ -153,7 +210,6 @@
     float: left;
   }
 }
-
 
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index > 0) {
@@ -195,7 +251,6 @@
   }
 }
 
-
 // Create grid for specific class
 @mixin make-grid($class) {
   @include float-grid-columns($class);
@@ -204,10 +259,6 @@
   @include loop-grid-columns($grid-columns, $class, push);
   @include loop-grid-columns($grid-columns, $class, offset);
 }
-
-
-
-
 
 // Clearfix
 //

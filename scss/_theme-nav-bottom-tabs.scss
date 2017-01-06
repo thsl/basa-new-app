@@ -1,10 +1,13 @@
+.has-navbottom{
+  padding-bottom: 80px;
+}
 .tabs-bottom-nav {
   .tab-nav {
     background-color: $white;
-    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15);
     border: none;
     border-top: 1px solid #E0E0E0;
     background-image: none;
+    @include theme-shadow-boxes($s-pos:-1px);
   }
   .tab-item {
     font-family: $theme-font-family;

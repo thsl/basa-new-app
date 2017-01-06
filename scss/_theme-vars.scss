@@ -1,12 +1,15 @@
 // $theme-font-path: "../lib/ionic/fonts" !default;
 $theme-verde-one: #338C4A;
 $theme-base-color: #EAEAEA;
-$theme-text-color: 000;
+$theme-text-color: #4C535E;
+
+$theme-header-fontsize-base: 37px;
+
 
 // fonts
 $theme-font-family: "montserrat", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !default;
 $theme-font-size: 15px;
-$theme-font-size-sm: 12px;
+$theme-font-size-sm: 11px;
 $theme-font-size-xs: 8px;
 
 
@@ -18,7 +21,71 @@ $ionicons-font-path: "../fonts" !default;
 $fa-font-path:   "../fonts" !default;
 $fa-version:          "4.7.0" !default;
 
+
+
+
+
+// Cores genéricas
 $white: #fff;
+$light-blue: #438CB9;
+$blue-light-two:#4990E2;
+$red: #AD4C57;
+$green: #00a65a;
+$aqua: #00c0ef;
+$yellow: #f39c12;
+$blue: #0073b7;
+$navy: #001F3F;
+$teal: #39CCCC;
+$olive: #3D9970;
+$lime: #01FF70;
+$orange: #FF851B;
+$fuchsia: #F012BE;
+$purple: #932ab6;
+$maroon: #85144B;
+$black: #222;
+$gray: #eaeaec;
+
+
+
+
+
+// these are the base sizes
+// adjust to your preference
+// ---------------------------------------------------------------
+$margin-xs: 3px;
+$margin-sm: 8px;
+$margin-md: 13px;
+$margin-lg: 20px;
+$margin-xl: 33px;
+
+// these are the scale values for each device size
+// adjust to your preference
+// ---------------------------------------------------------------
+$margin-scale-xs: 0.75;
+$margin-scale-sm: 0.75;
+$margin-scale-md: 1;
+$margin-scale-lg: 1.5;
+
+// Defined breakpoints
+// ---------------------------------------------------------------
+
+$screen-xs: 250px;
+$screen-xs-min: 250px;
+
+$screen-sm: 320px;
+$screen-sm-min: 320px;
+
+$screen-md: 480px;
+$screen-md-min: 480px;
+
+$screen-lg: 860px;
+$screen-lg-min: 860px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
 
 
 
@@ -34,7 +101,7 @@ $white: #fff;
 
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1
-$screen-xs:                  480px !default;
+$screen-xs:                  250px !default;
 //** Deprecated `$screen-xs-min` as of v3.2.0
 $screen-xs-min:              $screen-xs !default;
 //** Deprecated `$screen-phone` as of v3.0.1
@@ -42,21 +109,21 @@ $screen-phone:               $screen-xs-min !default;
 
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm:                  768px !default;
+$screen-sm:                  320px !default;
 $screen-sm-min:              $screen-sm !default;
 //** Deprecated `$screen-tablet` as of v3.0.1
 $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  992px !default;
+$screen-md:                  600px !default;
 $screen-md-min:              $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  1200px !default;
+$screen-lg:                  768px !default;
 $screen-lg-min:              $screen-lg !default;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min !default;
@@ -74,7 +141,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         15px !default;
+$grid-gutter-width:         16px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -87,16 +154,16 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
-$container-tablet:             (720px + $grid-gutter-width) !default;
+$container-tablet:             100% !default;
 //** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            (940px + $grid-gutter-width) !default;
+$container-desktop:            100% !default;
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-large-desktop:      100% !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;

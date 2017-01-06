@@ -3,3 +3,17 @@
     background-color: #EAEAEA;
   }
 }
+
+.tabbed-slidebox {
+  .slider {
+    margin: 5px 0;
+  }
+}
+
+.box-fluid {
+  margin: $margin-sm 0;
+  padding: $margin-sm;
+  background-color: $white;
+  @include theme-shadow-boxes(1px);
+  @include clearfix();
+}
